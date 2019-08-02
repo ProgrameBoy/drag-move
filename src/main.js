@@ -4,6 +4,10 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+import dragmove from "@/components/index"
+
+Vue.use(dragmove)
+
 new Vue({
   router,
   render: h => h(App)
