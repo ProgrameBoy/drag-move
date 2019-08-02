@@ -1,10 +1,12 @@
 {
   "name": "drag-move",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/dragMove.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name dragMove ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
