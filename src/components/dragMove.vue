@@ -3,6 +3,7 @@
   <div id="drag-wrapper" v-if="data">
     <div v-for="(item,index) in data" :key="index" :style="{postion:'absolute'}" :class="customClass">
       <slot></slot>
+      {{item.text}}
     </div>
   </div>
 
@@ -18,7 +19,11 @@ export default {
     },
     data: {
       type: Array,
-      default: () => []
+      default: () => [
+        {
+          text: "123"
+        }
+      ]
     },
     customClass: {
       type: String,
