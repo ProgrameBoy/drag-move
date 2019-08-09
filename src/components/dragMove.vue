@@ -84,22 +84,20 @@ export default {
     /** 移动方法 start**/
     // 元素选中
     elMousedown(event) {
-      console.log(event);
+      // event.stopPropagation();
       let elTarget = event.target;
       let domOffsetX = event.offsetX || event.layerX,
         domOffsetY = event.offsetY || event.layerY;
-      let disX = event.clientX - domOffsetX,
-        disY = event.clientY - domOffsetY;
-      // let disX = parseFloat(elTarget.style.top),
-      //   disY = parseFloat(elTarget.style.left);
-      console.log("元素top:", elTarget.style.top);
-      console.log("元素left:", elTarget.style.left);
+      // let disX = event.clientX - domOffsetX, //v1
+      //   disY = event.clientY - domOffsetY;
+      let disX = event.clientX,
+        disY = event.clientY; // v2
+      let offsetTop = parseFloat(elTarget.style.top),
+        offsetLeft = parseFloat(elTarget.style.left);
       document.onmousemove = e => {
-        let top = e.clientY - disY,
-          left = e.clientX - disX;
-        console.log("正在移动");
-        console.log("offsetX", e.offsetX);
-        console.log("offsetY", e.offsetY);
+        e.preventDefault();
+        let top = e.clientY - disY + offsetTop,
+          left = e.clientX - disX + offsetLeft;
         elTarget.style.top = top + "px";
         elTarget.style.left = left + "px";
       };
