@@ -94,14 +94,14 @@ export default {
         disY = event.clientY; // v2
       let offsetTop = parseFloat(elTarget.style.top),
         offsetLeft = parseFloat(elTarget.style.left);
+      let moveParam = { elTarget, disX, disY, offsetTop, offsetLeft };
       document.onmousemove = e => {
-        e.preventDefault();
-        let top = e.clientY - disY + offsetTop,
-          left = e.clientX - disX + offsetLeft;
-        elTarget.style.top = top + "px";
-        elTarget.style.left = left + "px";
+        // 移动
+        moveParam.event = e;
+        this.elMousemove(moveParam);
       };
       document.onmouseup = e => {
+        // 松开右击
         // 防止鼠标弹起来得时候不再移动
         document.onmousemove = null;
         // 防止鼠标弹起来后还会循环（即预防鼠标放上去的时候还会移动）
@@ -109,10 +109,13 @@ export default {
       };
     },
     // 元素移动中
-    elMousemove(event) {
-      console.log("开启移动");
-      console.log(this.disX);
-      console.log(this.disY);
+    elMousemove(param) {
+      let { event, elTarget, disX, disY, offsetTop, offsetLeft } = param;
+      event.preventDefault();
+      let top = event.clientY - disY + offsetTop,
+        left = event.clientX - disX + offsetLeft;
+      elTarget.style.top = top + "px";
+      elTarget.style.left = left + "px";
     },
     // 元素移动结束
     elMouseover(event) {}
@@ -123,7 +126,7 @@ export default {
 <style>
 #drag-wrapper {
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   height: 200px;
 }
