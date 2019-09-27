@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="-fengmianzuoshangjiao" unicode="&#59118;" d="M185.895385 710.892308v-628.578462L7.876923-120.123077V888.123077h1008.246154l-200.073846-177.230769h-630.153846zM441.107692 457.255385v-143.36L283.569231 155.569231V612.430769h456.861538L584.467692 457.255385H441.107692z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="-fengmianyouxiajiao" unicode="&#59120;" d="M838.104615 57.107692V685.686154L1016.123077 888.123077v-1008.246154H7.876923l200.073846 177.230769h630.153846zM582.892308 310.744615V454.104615L740.430769 612.430769v-456.861538H283.569231l155.963077 155.175384H582.892308z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="-fengmianzuoxiajiao" unicode="&#59121;" d="M185.895385 57.107692V685.686154L7.876923 888.123077v-1008.246154h1008.246154l-200.073846 177.230769h-630.153846zM441.107692 310.744615V454.104615L283.569231 612.430769v-456.861538h456.861538L584.467692 310.744615H441.107692z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="-fengmianyoushangjiao" unicode="&#59122;" d="M838.104615 710.892308v-628.578462L1016.123077-120.123077V888.123077H7.876923l200.073846-177.230769h630.153846zM582.892308 457.255385v-143.36L740.430769 155.569231V612.430769H283.569231l155.963077-155.175384H582.892308z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

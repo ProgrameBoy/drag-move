@@ -1,7 +1,7 @@
 <template>
   <div>
     <drag-move :data="data">
-      456132
+      drag-Move
     </drag-move>
   </div>
 </template>
@@ -15,12 +15,6 @@ export default {
       data: [
         {
           x: 0,
-          y: 0,
-          w: 1,
-          h: 1
-        },
-        {
-          x: 1,
           y: 0,
           w: 1,
           h: 1

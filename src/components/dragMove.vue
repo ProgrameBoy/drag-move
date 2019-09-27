@@ -3,6 +3,8 @@
   <div id="drag-wrapper" v-if="data">
     <div v-for="(item,index) in data" :key="index" @mousedown="elMousedown" style="position:absolute" :style="countStyle(item)" class="drag-el" :class="customClass">
       <slot></slot>
+
+      <i @click="dragResize_lowRight" class="drag-lowRight drag-iconfont iconfont icon--fengmianyouxiajiao"></i>
     </div>
   </div>
 
@@ -111,6 +113,10 @@ export default {
     // 元素移动中
     elMousemove(param) {
       let { event, elTarget, disX, disY, offsetTop, offsetLeft } = param;
+      /** 拦截 */
+      // let eventStyle = event.target.style;
+      // let eventTop = parseFloat(eventStyle.top || 0),
+      //   eventLeft = parseFloat(eventStyle.left || 0);
       event.preventDefault();
       let top = event.clientY - disY + offsetTop,
         left = event.clientX - disX + offsetLeft;
@@ -143,5 +149,16 @@ export default {
 }
 .drag-move_chunk {
   border: 1px solid #dedede;
+}
+.drag-iconfont {
+  height: 12px;
+  font-size: 12px;
+  color: #dedede;
+}
+.drag-lowRight {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
 }
 </style>
